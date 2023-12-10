@@ -6,7 +6,7 @@ export const getAllCars=()=>async dispatch=>{
     dispatch({type: 'LOADING' , payload:true})
 
     try {
-        const response = await axios.get('/api/cars/getallcars')
+        const response = await axios.get('http://localhost:5000/api/cars/getallcars')
         dispatch({type: 'GET_ALL_CARS', payload:response.data})
         dispatch({type: 'LOADING' , payload:false})
     } catch (error) {
@@ -61,7 +61,7 @@ export const deleteCar=(reqObj)=>async dispatch=>{
     dispatch({type: 'LOADING' , payload:true})
 
     try {
-         await axios.post('https://car-rental-xi-eight.vercel.app/api/cars/deletecar' , reqObj)
+         await axios.post('http://localhost:5000/api/cars/deletecar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
          message.success('Car deleted successfully')
