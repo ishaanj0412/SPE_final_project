@@ -2,9 +2,11 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 
+const uri = process.env.URI
+
 function connectDB(){
 
-    mongoose.connect('mongodb://localhost:27017/rental_app' , {useUnifiedTopology: true , useNewUrlParser: true})
+    mongoose.connect(uri, {useUnifiedTopology: true , useNewUrlParser: true})
 
     const connection = mongoose.connection
 
