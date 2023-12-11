@@ -1,0 +1,35 @@
+pipeline{
+    environment {
+        docker_image=""
+    }
+    
+    agent any
+    
+    stages{
+        stage('Stage 1: Git Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/ishaanj0412/SPE_final_project'
+            }
+        }
+        stage('Stage 2: Clean Docker Images'){
+            steps{
+                script{
+                    sh 'docker container prune -f'
+                    sh 'docker image prune -f'
+                }   
+            }
+        }
+        stage('Step 3: Ansible Deployment'){
+            steps{
+                ansiblePlaybook becomeUser: null,
+                colorized: true,
+                credentialsId: 'localhost',
+                disableHostKeyChecking: true,
+                installation: 'Ansible',
+                inventory: 'deployment/inventory',
+                playbook: 'deployment/deploy.yml',
+                sudoUser: null
+            }
+        }
+    }
+}

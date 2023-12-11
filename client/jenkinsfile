@@ -1,0 +1,55 @@
+pipeline{
+    
+    agent{
+        any{
+            label 'docker'
+            image 'node:6-alpine'
+            args '-p 3000:3000'
+        }
+    }
+    
+    environment{
+        CI = 'true'
+        registry = "spade0412/car_rental_frontend"
+    }
+    
+    stages{
+        stage('Stage 1: Git Pull') {
+            steps {
+                git branch: 'main',
+                url:'https://github.com/ishaanj0412/SPE_final_project.git'
+            }
+        }
+        stage('Stage 2: Build') {
+            steps {
+                dir('client') {
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Stage 3: Build Docker Image') {
+            steps {
+                script{
+                    dir('client') {
+                        docker_image = docker.build ''+registry+':latest'
+                    }
+                }
+            }
+        }
+        stage('Stage 4: Push Docker Image to Hub'){
+            steps{
+                script{
+                    docker.withRegistry('', 'DockerHubCred'){
+                        docker_image.push()
+                    }
+                }
+            }
+        }
+        stage('Stage 5: Free local space') {
+            steps {
+                sh 'docker rmi $registry:latest'
+            }
+        }
+    }
+    
+}
