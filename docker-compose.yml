@@ -19,7 +19,7 @@ services:
   backend_cont:
     image: spade0412/car_rental_backend:latest
     environment:
-      URI: mongodb://mymongodb:23456
+      URI: mongodb://mymongodb:27017
     restart: always
     depends_on:
       - mymongodb
