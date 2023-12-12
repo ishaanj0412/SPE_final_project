@@ -4,18 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:backend": "node server.js" 
+    "start:backend": "node server.js",
+    "test": "mocha --exit"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongoose": "^7.2.2",
     "nodemon": "^2.0.22",
     "stripe": "^12.8.0",
+    "supertest": "^6.3.3",
     "uuid": "^9.0.0",
-    "cors": "^2.8.5"
-
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
   }
 }

@@ -14,6 +14,12 @@ router.get("/getallcars", async (req, res) => {
 router.post("/addcar", async (req, res) => {
   try {
     const newcar = new Car(req.body);
+    if(req.body.rentPerHour <= 0 || !req.body.rentPerHour === 'number'){
+      return res.status(400).json({ message: 'RentPerHour must be a positive number!' });
+    }
+    if(req.body.capacity <= 0 || !req.body.capacity === 'number'){
+      return res.status(400).send({ message: 'Capacity must be a positive number!' });
+    }
     await newcar.save();
     res.send("Car added successfully");
   } catch (error) {
@@ -24,6 +30,12 @@ router.post("/addcar", async (req, res) => {
 router.post("/editcar", async (req, res) => {
   try {
     const car = await Car.findOne({ _id: req.body._id });
+    if(req.body.rentPerHour <= 0 || !req.body.rentPerHour === 'number'){
+      return res.status(400).json({ message: 'RentPerHour must be a positive number!' });
+    }
+    if(req.body.capacity <= 0 || !req.body.capacity === 'number'){
+      return res.status(400).send({ message: 'Capacity must be a positive number!' });
+    }
     car.name = req.body.name;
     car.image = req.body.image;
     car.fuelType = req.body.fuelType;
