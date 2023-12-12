@@ -22,7 +22,7 @@ services:
     image: spade0412/car_rental_backend:latest
     container_name: backend_cont
     environment:
-      URI: mongodb://playground-web-db:23456
+      URI: mongodb://mymongodb:23456
     restart: always
     depends_on:
       - playground-web-db
