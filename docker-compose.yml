@@ -7,7 +7,7 @@ services:
     networks:
       - node-network
     ports:
-      - 27017:27017
+      - 23456:23456
   playground-web-frontend:
     image: spade0412/car_rental_frontend:latest
     environment:
@@ -19,7 +19,7 @@ services:
   playground-web-backend:
     image: spade0412/car_rental_backend:latest
     environment:
-      URI: mongodb://playground-web-db:27017
+      URI: mongodb://playground-web-db:23456
     restart: always
     depends_on:
       - playground-web-db
