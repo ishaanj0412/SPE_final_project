@@ -2,6 +2,7 @@ version: '3'
 services:
   playground-web-db:
     image: mongo:latest
+    command: mongod --port 23456
     container_name: mymongodb
     volumes:
       - mongodata:/data/db
