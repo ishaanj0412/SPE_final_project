@@ -1,31 +1,28 @@
 version: '3'
 services:
-  playground-web-db:
+  mymongodb:
     image: mongo:latest
-    container_name: mymongodb
     volumes:
       - mongodata:/data/db
     networks:
       - node-network
     ports:
       - 23456:27017
-  playground-web-frontend:
+  frontend_cont:
     image: spade0412/car_rental_frontend:latest
-    container_name: frontend_cont
     environment:
       PORT: 3000
       PROXY_API: http://car_rental:5000/
     restart: always
     ports:
       - 3000:3000
-  playground-web-backend:
+  backend_cont:
     image: spade0412/car_rental_backend:latest
-    container_name: backend_cont
     environment:
       URI: mongodb://mymongodb:23456
     restart: always
     depends_on:
-      - playground-web-db
+      - mymongodb
     volumes:
       - .:/src
     networks:
