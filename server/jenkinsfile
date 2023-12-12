@@ -27,7 +27,14 @@ pipeline{
                 }
             }
         }
-        stage('Stage 3: Build Docker Image') {
+        stage('Stage 3: Testing'){
+            steps {
+                dir('server') {
+                    sh 'npm run test'
+                }
+            }
+        }
+        stage('Stage 4: Build Docker Image') {
             steps {
                 script{
                     dir('server') {
@@ -36,7 +43,7 @@ pipeline{
                 }
             }
         }
-        stage('Stage 4: Push Docker Image to Hub'){
+        stage('Stage 5: Push Docker Image to Hub'){
             steps{
                 script{
                     docker.withRegistry('', 'DockerHubCred'){
@@ -45,7 +52,7 @@ pipeline{
                 }
             }
         }
-        stage('Stage 5: Free local space') {
+        stage('Stage 6: Free local space') {
             steps {
                 sh 'docker rmi $registry:latest'
             }

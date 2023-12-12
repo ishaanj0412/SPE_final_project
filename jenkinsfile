@@ -14,6 +14,7 @@ pipeline{
         stage('Stage 2: Clean Docker Images'){
             steps{
                 script{
+                    sh 'docker stop deployment_mymongodb_1 deployment_frontend_cont_1 deployment_backend_cont_1 || true'
                     sh 'docker container prune -f'
                     sh 'docker image prune -f'
                 }   
