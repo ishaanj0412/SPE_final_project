@@ -2,12 +2,13 @@ version: '3'
 services:
   mymongodb:
     image: mongo:latest
+    command: mongod --port 23456
     volumes:
       - mongodata:/data/db
     networks:
       - node-network
     ports:
-      - 23456:27017
+      - 23456:23456
   frontend_cont:
     image: spade0412/car_rental_frontend:latest
     environment:
@@ -19,7 +20,7 @@ services:
   backend_cont:
     image: spade0412/car_rental_backend:latest
     environment:
-      URI: mongodb://mymongodb:27017
+      URI: mongodb://mymongodb:23456
     restart: always
     depends_on:
       - mymongodb
