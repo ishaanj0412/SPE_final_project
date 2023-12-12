@@ -11,6 +11,7 @@ export const getAllCars=()=>async dispatch=>{
         dispatch({type: 'LOADING' , payload:false})
     } catch (error) {
         console.log(error)
+        message.error(error.response.data.message)
         dispatch({type: 'LOADING' , payload:false})
     }
 
@@ -29,7 +30,8 @@ export const addCar=(reqObj)=>async dispatch=>{
             window.location.href='/admin'
          }, 500);
     } catch (error) {
-        console.log(error)
+        console.log(error.response.data)
+        message.error(error.response.data.message)
         dispatch({type: 'LOADING' , payload:false})
     }
       
@@ -50,6 +52,7 @@ export const editCar=(reqObj)=>async dispatch=>{
          }, 500);
     } catch (error) {
         console.log(error)
+        message.error(error.response.data.message)
         dispatch({type: 'LOADING' , payload:false})
     }
       
@@ -70,6 +73,7 @@ export const deleteCar=(reqObj)=>async dispatch=>{
          }, 500);
     } catch (error) {
         console.log(error)
+        message.error(error.response.data.message)
         dispatch({type: 'LOADING' , payload:false})
     }
       

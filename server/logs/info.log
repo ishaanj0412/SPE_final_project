@@ -1,0 +1,19 @@
+{"level":"warn","message":"Create user aborted: Username already in use","timestamp":"2023-12-12T11:08:29.440Z"}
+{"level":"info","message":"User created successfully","timestamp":"2023-12-12T11:09:09.736Z"}
+{"level":"warn","message":"Incorrect username or password","timestamp":"2023-12-12T11:09:24.776Z"}
+{"level":"error","message":"Error in logging in","timestamp":"2023-12-12T11:09:24.777Z"}
+{"level":"info","message":"Logged in successfully","timestamp":"2023-12-12T11:09:30.284Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-12T11:09:31.139Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-12T11:09:39.608Z"}
+{"level":"info","message":"Car deleted successfully","timestamp":"2023-12-12T11:09:43.210Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-12T11:09:44.028Z"}
+{"level":"warn","message":"Error in creating a car: Please enter positive value for rent","timestamp":"2023-12-12T11:11:14.985Z"}
+{"level":"info","message":"Created a new car successfully","timestamp":"2023-12-12T11:11:34.967Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-12T11:11:35.888Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-12T11:11:45.271Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-12T11:12:09.945Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-12T11:22:58.233Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-12T11:23:08.624Z"}
+{"level":"warn","message":"Error in creating a car: Please enter positive value for rent","timestamp":"2023-12-12T11:24:04.967Z"}
+{"level":"warn","message":"Error in creating a car: Please enter positive value for rent","timestamp":"2023-12-12T11:25:04.552Z"}
+{"level":"warn","message":"Error in creating a car: Please enter positive value for capacity","timestamp":"2023-12-12T11:25:16.656Z"}
