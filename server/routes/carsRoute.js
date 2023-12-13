@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Car = require("../models/carModel");
+const Booking = require("../models/bookingModel"); 
 const winston = require("winston")
 
 const logger = winston.createLogger({
@@ -76,10 +77,15 @@ router.post("/editcar", async (req, res) => {
 
 router.post("/deletecar", async (req, res) => {
   try {
-    await Car.findOneAndDelete({ _id: req.body.carid });
+    const car = await Car.findOne({ _id: req.body.carid });
+    if(!car){
+      return res.status(400).json({message : "Car Doesn't Exist"});
+    }
+    await Booking.deleteMany({ car: car });
+    await Car.findOneAndDelete({_id: req.body.carid });
 
-    res.send("Car deleted successfully");
-    logger.info("Car deleted successfully");
+    res.send("Car deleted successfully and bookings related to it also deleted");
+    logger.info("Car deleted successfully and bookings related to it also deleted");
   } catch (error) {
     logger.info("Error in deleting the car");
     return res.status(400).json({message : "Something went wrong"});

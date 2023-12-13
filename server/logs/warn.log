@@ -17,3 +17,4 @@
 {"level":"warn","message":"Error in creating a car: Please enter positive value for capacity","timestamp":"2023-12-13T11:28:48.710Z"}
 {"level":"warn","message":"Error in creating a car: Please enter positive value for rent","timestamp":"2023-12-13T11:29:40.456Z"}
 {"level":"warn","message":"Error in creating a car: Please enter positive value for capacity","timestamp":"2023-12-13T11:29:40.466Z"}
+{"level":"warn","message":"Incorrect username or password","timestamp":"2023-12-13T14:56:26.050Z"}

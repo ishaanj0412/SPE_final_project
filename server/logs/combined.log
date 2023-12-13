@@ -29,3 +29,39 @@
 {"level":"warn","message":"Error in creating a car: Please enter positive value for capacity","timestamp":"2023-12-13T11:28:48.710Z"}
 {"level":"warn","message":"Error in creating a car: Please enter positive value for rent","timestamp":"2023-12-13T11:29:40.456Z"}
 {"level":"warn","message":"Error in creating a car: Please enter positive value for capacity","timestamp":"2023-12-13T11:29:40.466Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:28:45.591Z"}
+{"level":"info","message":"Logged in successfully","timestamp":"2023-12-13T14:29:59.746Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:30:00.826Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:30:02.606Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:31:50.705Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:32:42.981Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:35:04.432Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:35:37.303Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:47:31.220Z"}
+{"level":"info","message":"Logged in successfully","timestamp":"2023-12-13T14:47:57.277Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:47:58.134Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:48:01.753Z"}
+{"level":"info","message":"Logged in successfully","timestamp":"2023-12-13T14:54:00.706Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:54:01.394Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:54:03.795Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:56:11.100Z"}
+{"level":"warn","message":"Incorrect username or password","timestamp":"2023-12-13T14:56:26.050Z"}
+{"level":"info","message":"User created successfully","timestamp":"2023-12-13T14:56:40.902Z"}
+{"level":"info","message":"Logged in successfully","timestamp":"2023-12-13T14:56:50.978Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:56:51.636Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:56:54.249Z"}
+{"level":"info","message":"Created a new car successfully","timestamp":"2023-12-13T14:57:23.137Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:57:23.894Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:57:25.470Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:57:27.327Z"}
+{"level":"info","message":"Booking Succesful","timestamp":"2023-12-13T14:58:42.484Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T14:58:43.241Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T14:58:45.980Z"}
+{"level":"info","message":"Error in deleting the car","timestamp":"2023-12-13T14:58:48.288Z"}
+{"level":"info","message":"Error in deleting the car","timestamp":"2023-12-13T15:00:09.666Z"}
+{"level":"info","message":"Error in deleting the car","timestamp":"2023-12-13T15:01:58.955Z"}
+{"level":"info","message":"Error in deleting the car","timestamp":"2023-12-13T15:02:19.913Z"}
+{"level":"info","message":"Error in deleting the car","timestamp":"2023-12-13T15:02:39.963Z"}
+{"level":"info","message":"Car deleted successfully and bookings related to it also deleted","timestamp":"2023-12-13T15:03:11.613Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T15:03:12.480Z"}
+{"level":"info","message":"Successfully returned all bookings","timestamp":"2023-12-13T15:03:15.575Z"}
