@@ -20,9 +20,12 @@ const logger = winston.createLogger({
 
 router.post("/bookcar", async (req, res) => {
   try {
+      const car = await Car.findOne({ _id: req.body.car });
+      if(car===null){
+        return res.status(400).json({message : "Car Doesn't Exist"});
+      }
       const newbooking = new Booking(req.body);
       await newbooking.save();
-      const car = await Car.findOne({ _id: req.body.car });
       car.bookedTimeSlots.push(req.body.bookedTimeSlots);
 
       await car.save();

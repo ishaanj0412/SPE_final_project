@@ -36,6 +36,7 @@ function UserBookings() {
       <h3 className="text-center mt-2">My Bookings</h3>
       <Row justify="center" gutter={16}>
         <Col lg={16} sm={24}>
+          console.log(userBookings);
           {userBookings.length > 0 ? (
             userBookings.map((booking) => (
               <Row gutter={16} className="bs1 mt-3 text-left" key={booking._id}>

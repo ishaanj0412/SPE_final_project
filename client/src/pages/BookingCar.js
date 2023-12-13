@@ -48,7 +48,7 @@ function BookingCar() {
       const formattedFromDate = fromDate.format("MMM DD YYYY HH:mm");
       const formattedToDate = toDate.format("MMM DD YYYY HH:mm");
 
-      const hoursDiff = toDate.diff(fromDate, "hours")+1;
+      const hoursDiff = toDate.diff(fromDate, "hours");
 
       setFrom(formattedFromDate);
       setTo(formattedToDate);
