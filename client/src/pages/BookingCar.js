@@ -6,13 +6,11 @@ import Spinner from "../components/Spinner";
 import { getAllCars } from "../redux/actions/carsActions";
 import moment from "moment";
 import { bookCar } from "../redux/actions/bookingActions";
-import StripeCheckout from "react-stripe-checkout";
-import AOS from 'aos';
 import {
   useLoaderData,
 } from "react-router-dom";
 
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+import 'aos/dist/aos.css'; 
 const { RangePicker } = DatePicker;
 function BookingCar() {
   const match = useLoaderData();
@@ -28,10 +26,10 @@ function BookingCar() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    if (cars.length == 0) {
+    if (cars.length === 0) {
       dispatch(getAllCars());
     } else {
-      setcar(cars.find((o) => o._id == match));
+      setcar(cars.find((o) => o._id === match));
     }
   }, [cars]);
 
@@ -43,17 +41,23 @@ function BookingCar() {
   }, [driver, totalHours]);
 
   function selectTimeSlots(values) {
-    setFrom(moment(values[0]).format("MMM DD yyyy HH:mm"));
-    setTo(moment(values[1]).format("MMM DD yyyy HH:mm"));
+    if (values && values.length === 2) { 
+      const fromDate = moment(values[0].$d);
+      const toDate = moment(values[1].$d);
 
-    setTotalHours(values[1].diff(values[0], "hours"));
+      const formattedFromDate = fromDate.format("MMM DD YYYY HH:mm");
+      const formattedToDate = toDate.format("MMM DD YYYY HH:mm");
+
+      const hoursDiff = toDate.diff(fromDate, "hours")+1;
+
+      setFrom(formattedFromDate);
+      setTo(formattedToDate);
+      setTotalHours(hoursDiff);
+    }
   }
 
-  
-
-  function onToken(token){
+  function onToken(){
     const reqObj = {
-        token,
         user: JSON.parse(localStorage.getItem("user"))._id,
         car: car._id,
         totalHours,
@@ -96,7 +100,7 @@ function BookingCar() {
           </Divider>
           <RangePicker
             showTime={{ format: "HH:mm" }}
-            format="MMM DD yyyy HH:mm"
+            format="MMM DD YYYY HH:mm"
             onChange={selectTimeSlots}
           />
           <br />
@@ -130,17 +134,12 @@ function BookingCar() {
 
               <h3>Total Amount : {totalAmount}</h3>
 
-              <StripeCheckout
-                shippingAddress
-                token={onToken}
-                currency='inr'
-                amount={totalAmount * 100}
-                stripeKey="pk_test_51OMQybSAVLrDKErRSEl5d159kHMFul0k43AmOqd1pgEWqMxdmDsHlDknYWzMOOfhvVbGBIBSW2gltFbtIkLTeJyQ00epGDPv2x"
-              >
-                  <button className="btn1">
+      
+              <button className="btn1" onClick={()=>{
+                onToken();
+              }}>
                 Book Now
               </button>
-              </StripeCheckout>
 
               
             </div>

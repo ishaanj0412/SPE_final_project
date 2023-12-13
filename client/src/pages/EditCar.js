@@ -21,7 +21,6 @@ function EditCar() {
     } else {
       settotalcars(cars);
       setcar(cars.find((o) => o._id == match));
-      console.log(car);
     }
   }, [cars]);
 
@@ -29,7 +28,6 @@ function EditCar() {
     values._id = car._id;
 
     dispatch(editCar(values));
-    console.log(values);
   }
 
   return (
