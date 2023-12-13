@@ -19,13 +19,10 @@ const logger = winston.createLogger({
 });
 
 router.post("/bookcar", async (req, res) => {
-  const { token } = req.body;
   try {
-      req.body.transactionId = token.id;//payment.source.id;
       const newbooking = new Booking(req.body);
       await newbooking.save();
       const car = await Car.findOne({ _id: req.body.car });
-      console.log(req.body.car);
       car.bookedTimeSlots.push(req.body.bookedTimeSlots);
 
       await car.save();
