@@ -1,21 +1,11 @@
-1) Commands for Node.js installation: <br />
+1) Commands to install Node.js version 20.10 through Node Version Manager (nvm): <br />
 
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash <br />
    nvm install 20.10 <br /> <br />
 
 2) Commands for MongoDB installation: <br />
 
-   sudo apt-get install gnupg curl<br />
-
-   curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \ <br />
-      sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \ <br />
-      --dearmor <br />
-   
-   echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list <br />
-
-   sudo apt-get update <br />
-
-   sudo apt-get install -y mongodb-org <br />
+   Please refer the given documentation for the installation of MongoDB and its setup: https://www.mongodb.com/docs/manual/administration/install-community/
 
 3) Command to start MongoDB: <br />
 
