@@ -29,3 +29,10 @@
 {"level":"warn","message":"Error in creating a car: Please enter positive value for capacity","timestamp":"2023-12-13T11:28:48.710Z"}
 {"level":"warn","message":"Error in creating a car: Please enter positive value for rent","timestamp":"2023-12-13T11:29:40.456Z"}
 {"level":"warn","message":"Error in creating a car: Please enter positive value for capacity","timestamp":"2023-12-13T11:29:40.466Z"}
+{"level":"info","message":"User created successfully","timestamp":"2023-12-13T12:47:38.698Z"}
+{"level":"info","message":"Logged in successfully","timestamp":"2023-12-13T12:47:47.841Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T12:47:48.768Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T12:48:03.704Z"}
+{"level":"info","message":"Created a new car successfully","timestamp":"2023-12-13T12:49:58.568Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T12:49:59.486Z"}
+{"level":"info","message":"Successfully fetched list of all cars","timestamp":"2023-12-13T12:50:12.437Z"}

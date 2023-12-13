@@ -4,7 +4,7 @@ body {
   font-family: 'Montserrat', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(207, 225, 225);
+  background-color: rgb(194, 220, 220);
 }
 body , html{
   overflow-x: hidden !important;
