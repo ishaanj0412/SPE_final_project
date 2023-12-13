@@ -18,7 +18,7 @@
         cmd: docker-compose pull
         chdir: ./
 
-    - name: Pull the Docker images specifed in docker-compose
+    - name: Define environment variable file
       command: touch .env
 
     - name: Run the pulled Docker images in detached mode

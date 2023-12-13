@@ -9,7 +9,7 @@ dotenv.config();
 const app = index.app;
 
 describe('POST /register', () => {
-    it('attempts to create an existing user', (done) => {
+    it('attempts to create an new user', (done) => {
       request(app)
         .post('/register')
         .send({

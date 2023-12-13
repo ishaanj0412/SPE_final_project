@@ -17,7 +17,6 @@ const logger = winston.createLogger({
   });
 
 router.post("/login", async(req, res) => {
-
       const {username , password} = req.body
 
       try {
@@ -58,7 +57,7 @@ router.post("/register", async(req, res) => {
     }
     else{
         logger.warn('Create user aborted: Username already in use');
-		return res.status(400).json({message: "Username in use"});
+		    return res.status(400).json({message: "Username already in use"});
     }
 });
 
